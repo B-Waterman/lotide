@@ -7,6 +7,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 //Should return all elements of an array except the first, AKA the tail
-const tail = function(array) {
-  return array.slice(1);
+function tail(array) {
+  const newArray = array.slice(1, array.length);
+  return 
 };
+
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words); // no need to capture the return value since we are not checking it
+assertEqual(words.length, 3); // original array should still have 3 elements!
