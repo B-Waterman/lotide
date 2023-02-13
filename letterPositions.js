@@ -30,18 +30,18 @@ const assertArraysEqual = function(arr1, arr2) {
 const letterPositions = function(sentence) {
   const results = {};
   sentence = sentence.toLowerCase();
-  let letter = sentence[i];
   for (let i = 0; i < sentence.length; i++) {
+    let letter = sentence[i];
     if (letter !== " " && letter !== "'") {
-      if (!results[letter]) {
-        results[letter] = [i];
+      if (!results[letter]) { //If key doesn't exists for letter yet...
+        results[letter] = [i]; //Push index value to key
       } else {
-        results[letter].push[i];
+        results[letter].push(i); //Create key & assign first appearance index value
       }
     }
   }
   return results;
 };
 
-console.log(letterPositions("I'm creating a beautiful pattern"));
-console.log(letterPositions("Lighthouse in the house"));
+assertArraysEqual(letterPositions("I'm creating a beautiful pattern").i, [0, 9, 20]); //Assertion Passed!
+assertArraysEqual(letterPositions("Lighthouse in the house").i, [0]); //Assertion Failed!
