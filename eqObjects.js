@@ -32,10 +32,7 @@ const assertEqual = function(actual, expected) {
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
-//Goal: function can assess both the length and the content of each object's array, return false if object has one more or less key than the other - Anything besides a Perfect Match
-// similar to eqArrays
 
-//Test if both objects are arrays, if length of array is same, if the keys And their values match
 const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
@@ -55,12 +52,3 @@ const eqObjects = function(object1, object2) {
   }
 
 };
-
-// Test Case:
-
-const shirtObject = {colour: "red", size: "medium"};
-const anotherCoolerShirtObject = {size: "medium", colour: "red"};
-assertEqual(eqObjects(shirtObject, anotherCoolerShirtObject), true);
-
-const longSleeveShirtObject = {size: "medium", colour: "red", sleaveLength: "long"};
-assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
