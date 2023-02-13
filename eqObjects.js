@@ -9,8 +9,18 @@ const assertEqual = function(actual, expected) {
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
-const eqObjects = function(object1, object2) {
+//Goal: function can assess both the length and the content of each object's array and return false if two different objects have the same properties, or same properties but different order, one more or less than the other - Anything besides a Perfect Match
+// similar to eqArrays
 
+//Test if both objects are arrays, if length of array is same, if the keys And their values match
+const eqObjects = function(object1, object2) {
+  if (object1.length !== object2.length) {
+    return false
+  }
+  if (Object.keys(object1) !== Object.keys(object2)) {
+    return false
+  }
+  
 };
 
 // Test Case:
