@@ -7,14 +7,14 @@ const assertEqual = function(actual, expected) {
   //Template literals pass the assertion's actual values into the final string!
 };
 
-//Test Code below
-assertEqual('Lighthouse Labs', 'Bootcamp');
-assertEqual(1, 1);
-assertEqual('Hello World', 'Hello World');
-assertEqual('cherry', 10);
-
+//Goal: pick out the desired key in a given object based on the value provided.
+//Need to loop, don't need index, for...of loop
+//Object.keys to look over keysS
 const findKeyByValue = function(object, value) {
-
+  for (let key of Object.keys(object)) {
+    if (object[key] === value) {
+    } return key;
+  }
 };
 
 //Test Case:
