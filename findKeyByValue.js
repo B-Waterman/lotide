@@ -13,7 +13,7 @@ assertEqual(1, 1);
 assertEqual('Hello World', 'Hello World');
 assertEqual('cherry', 10);
 
-const findKeyByValue = function(bestTVShowsByGenre, showName) {
+const findKeyByValue = function(object, value) {
 
 };
 
