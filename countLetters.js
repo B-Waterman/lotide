@@ -6,23 +6,17 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//Take in a string and tally the frequency of each letter's appearance. Spaces not included.
-//If looping through string, spaces will be generated as a key unless excluded, write out exclusion, should use == expression
-//for of loop
-//iterate through string, for every repeat letter add 1 to the total logged under the corresponding letter's key
 const countLetters = function(string) {
   let letterTally = {};
-
-  for (let letter of string) {
-    if (letterTally[letter]) {
-      letterTally[letter] += 1;
-    } else {
-      letterTally[letter] = 1;
+  let testingString = string.toLowerCase();
+  for (let letter of testingString) {
+    if (letter !== " " && letter !== "\'") {
+      if (letterTally[letter]) { //If string contains a given letter...
+        letterTally[letter] += 1; //Add one to existing key's value, OR
+      } else {
+        letterTally[letter] = 1; //Create key & assign starting value (tally) of 1
+      }
     }
   }
   return letterTally;
 };
-
-//Test Case:
-console.log(countLetters("I\'m creating a beautiful pattern"));
-console.log("I\'m creating a beautiful pattern");
