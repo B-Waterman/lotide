@@ -4,18 +4,18 @@
 //So we know we're working with booleans and likely .slice() or .splice()
 
 //Test Input
-array1 = [1, 2, 3, 4, 5, 60, 700, 8200]
+array1 = [1, 2, 3, 4, 5, 60, -700, 8200]
 
 const takeUntil = function(array, callback) {
   let slicedArray = [];
-  for (let item of array) {
-    if (callback(item) !== true) {
-    }
-    console.log(callback)
+  for (let i of array) {
+    if (callback(array[i])) {
+      slicedArray = array.slice(0, i)
+    } return slicedArray;
   }
   return slicedArray;
 };
 
 // Test Case:
-const newArray = takeUntil(array1, x => x < 0);
+const newArray = takeUntil(array1, i => i < 0);
 console.log(newArray);
