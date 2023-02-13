@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(string) {
   let letterTally = {};
-  let testingString = string.toLowerCase();
-  for (let letter of testingString) {
+  string = string.toLowerCase();
+  for (let letter of string) {
     if (letter !== " " && letter !== "'") {
       if (letterTally[letter]) { //If string contains a given letter...
         letterTally[letter] += 1; //Add one to existing key's value, OR
