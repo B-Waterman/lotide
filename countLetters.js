@@ -11,13 +11,18 @@ const assertEqual = function(actual, expected) {
 //for of loop
 //iterate through string, for every repeat letter add 1 to the total logged under the corresponding letter's key
 const countLetters = function(string) {
-  const letterTally = {};
+  let letterTally = {};
+
   for (let letter of string) {
     if (letterTally[letter]) {
       letterTally[letter] += 1;
+    } else {
+      letterTally[letter] = 1;
     }
   }
+  return letterTally;
 };
 
 //Test Case:
-console.log(countLetters('I\'m creating a beautiful pattern'));
+console.log(countLetters("I\'m creating a beautiful pattern"));
+console.log("I\'m creating a beautiful pattern");
