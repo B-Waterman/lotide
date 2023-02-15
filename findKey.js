@@ -15,6 +15,7 @@ const findKey = function(object, callback) {
   }
 };
 
+// Test Cases:
 findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
@@ -23,3 +24,6 @@ findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, i => i.stars === 2) // => "noma"
+
+
+assertArraysEqual(findKey, "noma");
