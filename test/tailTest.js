@@ -1,17 +1,22 @@
 //Testing tail.js
 
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-//Test Case 1: Check original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+describe("#tail", () => {
+  it("Original array still has 3 elements, array unaltered", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    tail(words);
+    assert.deepEqual(words.length, 3);
+  }); //Pass!
 
-//Test Case 2: Array with 1 element
-const lonelyNumber = [1];
-console.log(tail(lonelyNumber)); //Should yield an empty array as its tail; it does!
+  it("Array of 1 element yields en empty array", () => {
+    const lonelyNumber = [1];
+    assert.deepEqual(tail(lonelyNumber), []);
+  }); //Pass!
 
-//Test Case 3: Empty array
-const barrenArray = [];
-console.log(tail(barrenArray)); //Should yield an empty array as its tail; it does!
+  it("An empty array will yield an empty array", () => {
+    const barrenArray = [];
+    assert.deepEqual(barrenArray, []);
+  }); //Pass!
+});
