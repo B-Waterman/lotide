@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "A utility library inspired by the Lodash project, to learn the fundamentals of programming and data management using JavaScript.",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/B-Waterman/lotide.git"
+  },
+  "author": "B-Waterman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/B-Waterman/lotide/issues"
+  },
+  "homepage": "https://github.com/B-Waterman/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}
