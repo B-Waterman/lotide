@@ -1,33 +1,3 @@
-const eqArrays = function(arr1, arr2) {
-  // takes two arrays, if equal = true, if not = false
-  if (arr1.length !== arr2.length) {
-    return false;
-    // checks length first to rule out longer arrays with same starting values
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (Array.isArray(arr1[i]) && Array.isArray(arr2[i])) {
-      // if both are arrays, test if arrays are equal
-      if (!eqArrays(arr1[i], arr2[i])) {
-        return false;
-      }
-    } else if (arr1[i] !== arr2[i]) {
-      return false;
-      // if elements of arrays are not equal, return false
-    }
-  }
-  return true;
-};
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`⛔⛔⛔Assertion Failed: ${actual} !== ${expected}`);
-  }
-  //Template literals pass the assertion's actual values into the final string!
-};
-
 const middle = function(array) {
   let newArray = []
   if (array.length <= 2) {
@@ -41,3 +11,5 @@ const middle = function(array) {
     return [array[Math.floor(array.length / 2)]];
   }
 };
+
+module.exports = middle;
