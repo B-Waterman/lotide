@@ -1,9 +1,9 @@
 const middle = function(array) {
-  let newArray = []
+  let newArray = [];
   if (array.length <= 2) {
     return newArray;
   } else if (array.length % 2 === 0) {
-    let elementOne = ((array.length / 2) - 1); 
+    let elementOne = ((array.length / 2) - 1);
     let elementTwo = ((array.length / 2));
     newArray.push(array[elementOne], array[elementTwo]);
     return newArray;

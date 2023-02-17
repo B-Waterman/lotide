@@ -4,12 +4,10 @@ const assertEqual = require('../assertEqual');
 const findKeyByValue = require('../findKeyByValue');
 
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  anthology: "Love, Death & Robots",
   comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire"
+  drama: "The Last Of Us"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-
-module.exports = findKeyByValue;
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Last Of Us"), "drama"); //Pass!
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Love, Death & Robots"), undefined); //Fail!
