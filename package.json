@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@b-waterman/lotide",
   "version": "1.0.0",
   "description": "A utility library inspired by the Lodash project, to learn the fundamentals of programming and data management using JavaScript.",
   "main": "assertArraysEqual.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/B-Waterman/lotide.git"
   },
-  "author": "B-Waterman",
+  "author": "Brooke Waterman",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/B-Waterman/lotide/issues"
