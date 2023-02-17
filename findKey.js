@@ -1,15 +1,14 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2) === true) {
+    console.log(`✅✅✅Assertion Passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`⛔⛔⛔Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`⛔⛔⛔Assertion Failed: ${arr1} !== ${arr2}`);
   }
-  //Template literals pass the assertion's actual values into the final string!
 };
 
-const findKey = function(object, callback) {
+const findKey = function(object, value) {
   for (let key of Object.keys(object)) {
-    if (object[key] === value) {
+    if ((object[key] === value)) {
       return key;
     }
   }
@@ -27,3 +26,5 @@ findKey({
 
 
 assertArraysEqual(findKey, "noma");
+
+module.exports = findKey;
