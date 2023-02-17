@@ -1,3 +1,5 @@
+//Testing countOnly.js
+
 const assertEqual = require('../assertEqual');
 
 const firstNames = [
